@@ -1042,11 +1042,10 @@
     let pipelineLoaded = false;
 
     // Available sample videos for evaluation
+    // Keep the hosted demo lightweight.  The other source videos can be added
+    // later through object storage without changing the player logic.
     const AVAILABLE_VIDEOS = [
-      { id: 'bhojon_bilashi', title: 'Bhojon Bilashi (Food & Dining Drama)' },
-      { id: 'indubala_bhaater_hotel', title: 'Indubala Bhaater Hotel (Cooking Drama)' },
-      { id: 'mohanagar', title: 'Mohanagar (Police Interrogation)' },
-      { id: 'money_honey', title: 'Money Honey (Heist Action)' }
+      { id: 'mohanagar', title: 'Mohanagar (Police Interrogation)' }
     ];
 
     function populateVideoSelector(activeId) {
@@ -1090,7 +1089,7 @@
     }
 
     const BOOTSTRAP_PATHS = [
-      { manifest: './manifest.xml', debug: './debug.json' },
+      { manifest: './data/mohanagar/manifest.xml', debug: './data/mohanagar/debug.json' },
     ];
 
     function resolveCreativeAsset(path) {

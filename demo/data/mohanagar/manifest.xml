@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  
+  <vmap:AdBreak breakType="linear" breakId="brk_moh_001" timeOffset="00:03:15.000">
+    <vmap:AdSource id="src_brk_moh_001" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0" xmlns="http://www.iab.net/videosuite/vast">
+          <Ad id="ad_brk_moh_001">
+            <InLine>
+              <AdSystem version="1.0">AdTech Video Pipeline</AdSystem>
+              <AdTitle>StreamFlix</AdTitle>
+              <Description>Contextual Mid-Roll Placement</Description>
+              <Creatives>
+                <Creative id="cr_brk_moh_001">
+                  <Linear>
+                    <Duration>00:00:05</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" type="video/mp4" width="1920" height="1080">
+                        <![CDATA[assets/ads/streamflix_15s.mp4]]>
+                      </MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  
+</vmap:VMAP>

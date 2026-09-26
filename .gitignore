@@ -22,6 +22,14 @@ demo/manifest.xml
 demo/debug.json
 demo/*.mp4
 
+# ---- Hosted demo bundle (the selected sample remains below GitHub's limit) ----
+!demo/mohanagar.mp4
+!demo/assets/ads/*.mp4
+!demo/data/
+!demo/data/mohanagar/
+!demo/data/mohanagar/debug.json
+!demo/data/mohanagar/manifest.xml
+
 # ---- Local env / IDE / OS ----
 .venv/
 venv/
