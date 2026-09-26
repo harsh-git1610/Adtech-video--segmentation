@@ -43,7 +43,7 @@ Nothing is hardcoded: brands are data, thresholds live in YAML config, and a **P
 - **Transparent output** — every decision (scene tags, scores, reasons, ranked brands, blocked brands) is emitted to `debug.json`.
 - **Standards-compliant export** — generated manifests validate against the public IAB **VMAP 1.0.1** XSD (a build gate, not optional polish).
 - **Live-runnable demo** — all ML inference is precomputed; the demo runs from static files with zero network/API calls at presentation time.
-- **Phase-organized codebase** — the git history itself is structured phase by phase, mirroring the build spec in `adtech-video-segmentation-build-guide.md`.
+- **Phase-organized codebase** — the git history itself is structured phase by phase, mirroring the phased engineering spec this project was built against.
 
 ## How It Works — Three Questions, Three Subsystems
 
@@ -424,4 +424,4 @@ All phases (0–7) are **implemented** and committed, and the git history is del
 
 ---
 
-*See `adtech-video-segmentation-build-guide.md` for the full engineering spec, data contracts, and per-phase acceptance criteria that this implementation was built against.*
+*See the [Architecture — Phase by Phase](#architecture--phase-by-phase) section for the phase-by-phase spec and the acceptance criteria each stage was built against.*
