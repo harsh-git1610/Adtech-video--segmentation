@@ -1,0 +1,79 @@
+# Activity Taxonomy — Phase 4 Scene Understanding
+# Each label in this list is embedded via CLIP text encoder for zero-shot similarity scoring.
+# Add new labels here freely; no pipeline code changes required.
+# Labels should be human-readable noun phrases as they'll be passed to CLIP's tokenizer.
+
+activity_labels:
+  # Meal & food contexts
+  - "family meal"
+  - "casual dining"
+  - "restaurant dining"
+  - "lunch break"
+  - "street food"
+  - "cooking at home"
+  - "outdoor picnic"
+
+  # Social / celebratory
+  - "celebration party"
+  - "wedding ceremony"
+  - "birthday party"
+  - "festival celebration"
+  - "sports watching party"
+  - "youth gathering"
+  - "concert or live music"
+  - "friend hangout"
+
+  # Grief / sorrow
+  - "funeral ceremony"
+  - "cremation ritual"
+  - "wake vigil for deceased"
+  - "mourning and grief"
+  - "condolence visit"
+
+  # Medical / emergency
+  - "hospital scene"
+  - "medical emergency"
+  - "ambulance scene"
+  - "surgery or treatment"
+
+  # Action / crime / violence
+  - "chase action sequence"
+  - "fight or violence"
+  - "car accident crash"
+  - "crime or robbery"
+  - "explosion or disaster"
+  - "protest or riot"
+
+  # Domestic / home life
+  - "home life interior"
+  - "parenting children"
+  - "romantic couple scene"
+  - "elderly couple at home"
+  - "garden or outdoor home"
+
+  # Work / urban
+  - "office work meeting"
+  - "remote work laptop"
+  - "urban commute"
+  - "shopping mall"
+  - "online shopping delivery"
+
+  # Travel / outdoor
+  - "road trip driving"
+  - "scenic nature landscape"
+  - "adventure outdoor activity"
+  - "beach vacation"
+  - "mountain hiking"
+
+  # Entertainment / leisure
+  - "home entertainment television"
+  - "gaming session"
+  - "movie night"
+  - "reading relaxation"
+  - "couch relaxation"
+
+# Minimum confidence threshold to include a tag in activity_tags
+confidence_threshold: 0.10
+
+# Maximum number of tags to emit per scene (top-N by confidence)
+max_tags_per_scene: 8

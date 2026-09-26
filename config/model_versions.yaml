@@ -1,0 +1,39 @@
+# Model Versions Configuration
+whisper:
+  model_size: "medium"
+  language: "auto"
+  word_timestamps: true
+  backend: "faster-whisper"
+  device: "auto"
+  compute_type: "default"
+
+clip:
+  model_name: "ViT-B/32"
+  embedding_dim: 512
+  provider: "openai-clip"
+
+sentence_transformer:
+  model_name: "all-mpnet-base-v2"
+  embedding_dim: 768
+  normalize_embeddings: true
+
+pyscenedetect:
+  detector: "AdaptiveDetector"
+  adaptive_threshold: 3.0
+  min_scene_len_frames: 15
+
+scene_segmentation:
+  shot_similarity_threshold: 0.82
+  min_scene_duration_sec: 8.0
+  max_scene_duration_sec: 180.0
+  max_asr_pause_threshold_sec: 2.0
+  scene_setting_phrases:
+    - "meanwhile"
+    - "later that day"
+    - "the next day"
+    - "next morning"
+    - "one year later"
+    - "few days later"
+    - "suddenly"
+    - "chapter"
+    - "episode"
