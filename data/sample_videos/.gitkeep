@@ -1,0 +1,3 @@
+# This directory holds sample video files for pipeline processing.
+# Add .mp4 or other video files here; they are .gitignored by size but this
+# .gitkeep ensures the directory is tracked.

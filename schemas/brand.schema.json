@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "brand.schema.json",
+  "title": "Brand",
+  "description": "A single advertiser brand entry in the catalogue. ALL fields are required — a brand without negative_contexts would silently defeat the hard-block safety requirement.",
+  "type": "object",
+  "required": [
+    "brand_id",
+    "display_name",
+    "category",
+    "target_contexts",
+    "negative_contexts",
+    "creative_asset",
+    "duration_sec",
+    "tone"
+  ],
+  "properties": {
+    "brand_id": {
+      "type": "string",
+      "description": "Stable unique identifier, snake_case, prefixed with 'brand_', e.g. 'brand_zestcola'",
+      "pattern": "^brand_[a-z0-9_]+$"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Human-readable brand name shown in UI and debug output",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "description": "Broad advertiser category, e.g. 'beverage', 'automobile', 'insurance'",
+      "minLength": 1
+    },
+    "target_contexts": {
+      "type": "array",
+      "description": "Scene activity/mood contexts in which this brand is a GOOD match (used for embedding cosine similarity ranking)",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "negative_contexts": {
+      "type": "array",
+      "description": "Scene activity/mood contexts that HARD-BLOCK this brand from appearing. Must never be empty — every brand in every category has contexts where it would be inappropriate. An empty array would silently disable the safety filter for that brand.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "creative_asset": {
+      "type": "string",
+      "description": "Relative path to the brand's video creative file, e.g. 'assets/ads/zestcola_15s.mp4'",
+      "minLength": 1
+    },
+    "duration_sec": {
+      "type": "number",
+      "description": "Duration of the creative asset in seconds (used for ad-load budget accounting)",
+      "exclusiveMinimum": 0
+    },
+    "tone": {
+      "type": "string",
+      "description": "Creative tone descriptor, e.g. 'energetic', 'warm', 'aspirational'.",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

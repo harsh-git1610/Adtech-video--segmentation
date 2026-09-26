@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "break_candidate.schema.json",
+  "title": "BreakCandidate",
+  "description": "A potential ad-break point at a scene boundary, including cut-safety scoring and pacing eligibility.",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "timestamp",
+    "scene_before",
+    "scene_after",
+    "cut_safety_score",
+    "cut_safety_reasons"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Unique identifier for this break candidate, e.g. 'brk_0007'",
+      "pattern": "^brk_\\d+$"
+    },
+    "timestamp": {
+      "type": "number",
+      "description": "Position in the video (seconds) where this break would be inserted",
+      "minimum": 0
+    },
+    "scene_before": {
+      "type": "string",
+      "description": "scene_id of the scene immediately before this break point"
+    },
+    "scene_after": {
+      "type": "string",
+      "description": "scene_id of the scene immediately after this break point"
+    },
+    "cut_safety_score": {
+      "type": "number",
+      "description": "Composite cut-safety score in [0, 1]; higher = safer place to cut",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "cut_safety_reasons": {
+      "type": "object",
+      "description": "Decomposed sub-signals that contributed to cut_safety_score — never emit an opaque number without this",
+      "required": [
+        "sentence_boundary_aligned",
+        "silence_gap_ms",
+        "shot_boundary_aligned",
+        "action_continuity_penalty"
+      ],
+      "properties": {
+        "sentence_boundary_aligned": {
+          "type": "boolean",
+          "description": "True if the cut falls on a sentence boundary per Whisper word-level timestamps"
+        },
+        "silence_gap_ms": {
+          "type": "number",
+          "description": "RMS-silence duration (milliseconds) around the cut timestamp; larger = safer",
+          "minimum": 0
+        },
+        "shot_boundary_aligned": {
+          "type": "boolean",
+          "description": "True if the cut coincides with a PySceneDetect shot boundary"
+        },
+        "action_continuity_penalty": {
+          "type": "number",
+          "description": "Penalty [0, 1] applied when cutting mid high-motion action or mid camera pan; 0 = no penalty",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "additionalProperties": true
+    },
+    "pacing_eligible": {
+      "type": ["boolean", "null"],
+      "description": "True if this candidate survived the cut-safety floor and is eligible for pacing evaluation; null/unset during Phase 2"
+    },
+    "pacing_reasons": {
+      "type": ["object", "null"],
+      "description": "Pacing-engine bookkeeping at the time this candidate was evaluated; null/unset during Phase 2",
+      "properties": {
+        "breaks_so_far_this_hour": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min_gap_satisfied": {
+          "type": "boolean"
+        },
+        "ad_load_budget_remaining_sec": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "final_decision": {
+      "type": ["string", "null"],
+      "description": "Terminal outcome for this candidate; null/unset during Phase 2",
+      "enum": ["BREAK_APPROVED", "REJECTED_UNSAFE", "REJECTED_PACING", null]
+    }
+  },
+  "additionalProperties": false
+}

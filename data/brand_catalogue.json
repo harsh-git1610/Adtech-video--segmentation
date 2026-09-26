@@ -1,0 +1,228 @@
+[
+  {
+    "brand_id": "brand_zestcola",
+    "display_name": "ZestCola",
+    "category": "beverage",
+    "target_contexts": [
+      "celebration",
+      "youth_gathering",
+      "sports_watching",
+      "family_meal",
+      "party",
+      "concert",
+      "outdoor_picnic"
+    ],
+    "negative_contexts": [
+      "funeral",
+      "grief",
+      "hospital",
+      "medical_emergency",
+      "accident",
+      "violence",
+      "mourning",
+      "cremation",
+      "wake",
+      "tragedy"
+    ],
+    "creative_asset": "assets/ads/zestcola_15s.mp4",
+    "duration_sec": 15,
+    "tone": "energetic"
+  },
+  {
+    "brand_id": "brand_crunchbite",
+    "display_name": "CrunchBite",
+    "category": "fast_food",
+    "target_contexts": [
+      "family_meal",
+      "lunch_break",
+      "friend_hangout",
+      "road_trip",
+      "late_night_snack",
+      "sports_watching",
+      "casual_dining"
+    ],
+    "negative_contexts": [
+      "funeral",
+      "grief",
+      "hospital",
+      "medical_emergency",
+      "fasting",
+      "hunger_crisis",
+      "food_shortage",
+      "violence",
+      "accident",
+      "mourning"
+    ],
+    "creative_asset": "assets/ads/crunchbite_20s.mp4",
+    "duration_sec": 20,
+    "tone": "fun"
+  },
+  {
+    "brand_id": "brand_shelterwise",
+    "display_name": "ShelterWise Insurance",
+    "category": "insurance",
+    "target_contexts": [
+      "family_gathering",
+      "home_life",
+      "retirement_planning",
+      "new_home",
+      "parenting",
+      "financial_planning",
+      "rainy_day"
+    ],
+    "negative_contexts": [
+      "violence",
+      "crime",
+      "gambling",
+      "fraud",
+      "active_disaster",
+      "war_zone",
+      "protest_riot",
+      "accident",
+      "medical_emergency"
+    ],
+    "creative_asset": "assets/ads/shelterwise_30s.mp4",
+    "duration_sec": 30,
+    "tone": "reassuring"
+  },
+  {
+    "brand_id": "brand_novatel",
+    "display_name": "Novatel Mobile",
+    "category": "telecom",
+    "target_contexts": [
+      "urban_commute",
+      "remote_work",
+      "travel",
+      "gaming",
+      "social_media_use",
+      "video_call",
+      "youth_gathering"
+    ],
+    "negative_contexts": [
+      "funeral",
+      "grief",
+      "hospital",
+      "medical_emergency",
+      "accident",
+      "violence",
+      "mourning",
+      "tragedy"
+    ],
+    "creative_asset": "assets/ads/novatel_20s.mp4",
+    "duration_sec": 20,
+    "tone": "modern"
+  },
+  {
+    "brand_id": "brand_streamflix",
+    "display_name": "StreamFlix",
+    "category": "streaming_service",
+    "target_contexts": [
+      "home_entertainment",
+      "binge_watching",
+      "movie_night",
+      "family_gathering",
+      "weekend_leisure",
+      "date_night",
+      "couch_relaxation"
+    ],
+    "negative_contexts": [
+      "funeral",
+      "grief",
+      "hospital",
+      "medical_emergency",
+      "violence",
+      "tragedy",
+      "mourning",
+      "accident"
+    ],
+    "creative_asset": "assets/ads/streamflix_15s.mp4",
+    "duration_sec": 15,
+    "tone": "aspirational"
+  },
+  {
+    "brand_id": "brand_voltdrive",
+    "display_name": "VoltDrive Auto",
+    "category": "automobile",
+    "target_contexts": [
+      "road_trip",
+      "adventure",
+      "urban_commute",
+      "family_outing",
+      "scenic_drive",
+      "nature_exploration",
+      "aspirational_lifestyle"
+    ],
+    "negative_contexts": [
+      "accident",
+      "car_crash",
+      "vehicle_fire",
+      "road_rage",
+      "drunk_driving",
+      "violence",
+      "grief",
+      "funeral",
+      "medical_emergency",
+      "tragedy"
+    ],
+    "creative_asset": "assets/ads/voltdrive_30s.mp4",
+    "duration_sec": 30,
+    "tone": "aspirational"
+  },
+  {
+    "brand_id": "brand_munchpop",
+    "display_name": "MunchPop Snacks",
+    "category": "snack",
+    "target_contexts": [
+      "sports_watching",
+      "gaming",
+      "movie_night",
+      "party",
+      "school_break",
+      "outdoor_picnic",
+      "office_snack"
+    ],
+    "negative_contexts": [
+      "funeral",
+      "grief",
+      "hospital",
+      "medical_emergency",
+      "fasting",
+      "hunger_crisis",
+      "eating_disorder_context",
+      "violence",
+      "accident",
+      "mourning"
+    ],
+    "creative_asset": "assets/ads/munchpop_15s.mp4",
+    "duration_sec": 15,
+    "tone": "playful"
+  },
+  {
+    "brand_id": "brand_quickkart",
+    "display_name": "QuickKart",
+    "category": "e_commerce",
+    "target_contexts": [
+      "online_shopping",
+      "festive_season",
+      "gift_giving",
+      "home_delivery",
+      "deal_hunting",
+      "urban_lifestyle",
+      "convenience_living"
+    ],
+    "negative_contexts": [
+      "grief",
+      "funeral",
+      "mourning",
+      "violence",
+      "accident",
+      "medical_emergency",
+      "tragedy",
+      "poverty",
+      "financial_distress"
+    ],
+    "creative_asset": "assets/ads/quickkart_20s.mp4",
+    "duration_sec": 20,
+    "tone": "upbeat"
+  }
+]

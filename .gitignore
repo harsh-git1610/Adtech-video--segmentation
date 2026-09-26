@@ -1,0 +1,32 @@
+# ---- Python caches / tooling ----
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# ---- Generated media assets (regenerate via scripts/create_sample_ad_assets.py) ----
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# ---- Generated pipeline outputs (regenerate via run_pipeline.py) ----
+data/processed/
+
+# ---- Generated demo data (regenerate via scripts/prepare_demo_dataset.py) ----
+demo/data/
+demo/manifest.xml
+demo/debug.json
+demo/*.mp4
+
+# ---- Local env / IDE / OS ----
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

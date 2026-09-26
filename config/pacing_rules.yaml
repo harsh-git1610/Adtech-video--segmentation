@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Pacing Rules Configuration
+# All values here are the SINGLE SOURCE OF TRUTH for ad-break scheduling.
+# No pipeline code may reference numeric pacing thresholds as literals.
+# To adjust cadence for a specific title or market, override this file —
+# zero code changes required.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Maximum number of ad breaks allowed within any rolling 60-minute window.
+# Broadcast TV standard (BARB / IAB guidelines) targets 4-6 breaks/hour for
+# long-form drama. We use 6 to stay within audience-tolerance thresholds while
+# maximising revenue opportunity for a ~90-min film.
+max_breaks_per_hour: 6
+
+# Minimum gap (seconds) between the END of one ad pod and the START of the next.
+# 480 s = 8 minutes — IAB VAST/VMAP best-practice minimum for long-form OTT
+# content. Shorter gaps cause viewer fatigue and increase skip rates.
+min_gap_seconds: 480
+
+# Target ad load as a percentage of total video runtime.
+# 12% is the typical OTT ad-supported (AVOD) ceiling before churn noticeably
+# increases (per industry benchmarks). The pacing engine stops approving breaks
+# once cumulative ad seconds / total runtime exceeds this value.
+target_ad_load_pct: 12.0
+
+# No break will be placed before this many seconds have elapsed from the start
+# of the video. 300 s = 5 minutes. Gives the audience time to get invested in
+# the story before the first commercial interruption — mirrors broadcast rules
+# that protect the "cold open" / pre-title sequence.
+first_break_not_before_sec: 300
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Derived / future-use fields (not consumed by Phase 0; reserved for Phase 3)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Minimum cut-safety score a candidate must achieve to be forwarded to the
+# pacing engine (candidates below this floor are tagged REJECTED_UNSAFE).
+cut_safety_floor: 0.55
+
+# Maximum duration (seconds) of a single ad pod placed at any one break.
+# Limits "pod stuffing" — a single break should not exceed 60 s of ads.
+max_pod_duration_sec: 60
+
+# Default placeholder duration (seconds) per ad break before brand matching (Phase 4).
+default_ad_duration_sec: 15

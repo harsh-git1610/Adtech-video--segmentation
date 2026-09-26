@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scene.schema.json",
+  "title": "Scene",
+  "description": "A semantic scene segment extracted from a long-form video, consisting of one or more merged shots.",
+  "type": "object",
+  "required": [
+    "scene_id",
+    "start_ts",
+    "end_ts",
+    "shot_ids",
+    "activity_tags",
+    "dominant_activity",
+    "asr_text"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string",
+      "description": "Unique identifier for the scene, e.g. 'sc_014'",
+      "pattern": "^sc_\\d+$"
+    },
+    "start_ts": {
+      "type": "number",
+      "description": "Scene start timestamp in seconds from the start of the video",
+      "minimum": 0
+    },
+    "end_ts": {
+      "type": "number",
+      "description": "Scene end timestamp in seconds; must be strictly greater than start_ts",
+      "minimum": 0
+    },
+    "shot_ids": {
+      "type": "array",
+      "description": "Ordered list of shot IDs that were merged to form this scene",
+      "items": {
+        "type": "string",
+        "pattern": "^sh_\\d+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "activity_tags": {
+      "type": "array",
+      "description": "Zero-shot activity/context labels detected in this scene, sorted by descending confidence",
+      "items": {
+        "type": "object",
+        "required": ["label", "confidence"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Human-readable activity or context label, e.g. 'funeral', 'celebration'"
+          },
+          "confidence": {
+            "type": "number",
+            "description": "Model confidence score for this label",
+            "minimum": 0.0,
+            "maximum": 1.0
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "dominant_activity": {
+      "type": "string",
+      "description": "The single highest-confidence activity tag label; drives brand-matching weighting"
+    },
+    "mood": {
+      "type": "string",
+      "description": "Optional coarse mood descriptor, e.g. 'somber', 'upbeat', 'tense'"
+    },
+    "asr_text": {
+      "type": "string",
+      "description": "Full ASR transcript of dialogue/narration within this scene (may be empty string if silent)"
+    },
+    "embedding": {
+      "type": "array",
+      "description": "Optional dense vector representation of the scene (model-versioned). Dimension is 384 or 768 depending on the encoder declared in model_versions.yaml.",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
