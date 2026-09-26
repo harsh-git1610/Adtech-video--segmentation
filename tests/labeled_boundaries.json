@@ -1,0 +1,176 @@
+[
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 8.44,
+    "label": "safe",
+    "rationale": "Natural scene transition after intro titles, pause in audio, stable shot transition"
+  },
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 16.2,
+    "label": "safe",
+    "rationale": "Camera switches to wide kitchen shot, speech concluded before shot change"
+  },
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 24.52,
+    "label": "jarring",
+    "rationale": "Cuts while character is midway through ordering dish with no pause"
+  },
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 35.8,
+    "label": "safe",
+    "rationale": "Full sentence stop followed by laugh pause, clean shot change"
+  },
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 48.12,
+    "label": "jarring",
+    "rationale": "Rapid hand movement and plate serving in progress with ongoing speech"
+  },
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 62.0,
+    "label": "safe",
+    "rationale": "Topic conclusion, fade to dining area, ambient silence gap"
+  },
+  {
+    "video_id": "bhojon_bilashi",
+    "timestamp": 74.3,
+    "label": "safe",
+    "rationale": "Shot-reverse-shot dialogue exchange ended cleanly"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 12.1,
+    "label": "safe",
+    "rationale": "Police station exterior night shot cut, ambient street sound with >1s silence"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 22.4,
+    "label": "jarring",
+    "rationale": "Mid-interrogation question without pause, cut splits dialogue"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 31.85,
+    "label": "safe",
+    "rationale": "Dialogue turn shift, 1.2s silence before officer responds, shot aligned"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 45.2,
+    "label": "safe",
+    "rationale": "Officer walks out and door closes, complete action followed by silence"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 58.7,
+    "label": "jarring",
+    "rationale": "Mid car braking scene with screech audio and fast camera pan"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 72.15,
+    "label": "safe",
+    "rationale": "Phone call disconnects, quiet ambient room, shot transition"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 88.0,
+    "label": "safe",
+    "rationale": "Scene fades to black before next chapter, long silence gap"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 10.5,
+    "label": "safe",
+    "rationale": "Memory flashback transition, song verse ends, natural musical pause"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 19.8,
+    "label": "jarring",
+    "rationale": "Monologue sentence unfinished, character drawing breath"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 32.4,
+    "label": "safe",
+    "rationale": "Long pause while stirring pot, ambient hearth sound, dialogue complete"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 44.1,
+    "label": "safe",
+    "rationale": "Guest stands up, Bengali sentence concludes with dā̃ṛi, shot boundary"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 55.6,
+    "label": "jarring",
+    "rationale": "Fast camera whip-pan across dining hall with movement blur"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 68.9,
+    "label": "safe",
+    "rationale": "Courtyard sunset view, ambient nature sound, complete silence from dialogue"
+  },
+  {
+    "video_id": "indubala_bhaater_hotel",
+    "timestamp": 81.2,
+    "label": "safe",
+    "rationale": "Letter reading finishes, quiet pause before next scene"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 9.2,
+    "label": "safe",
+    "rationale": "Opening establishing shot ends at warehouse exterior"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 18.4,
+    "label": "jarring",
+    "rationale": "Running chase continues across alleyway, high-motion action"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 27.6,
+    "label": "safe",
+    "rationale": "Character catches breath, dialogue complete, natural pause"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 39.8,
+    "label": "safe",
+    "rationale": "Laptop typing stops, computer display shown, silence"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 52.3,
+    "label": "jarring",
+    "rationale": "Mid heated phone argument, speaker cut off mid-sentence"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 65.0,
+    "label": "safe",
+    "rationale": "Clean cut before evening transition, shot transition aligned"
+  },
+  {
+    "video_id": "money_honey",
+    "timestamp": 78.4,
+    "label": "jarring",
+    "rationale": "Car door slams while speaker is shouting in background"
+  },
+  {
+    "video_id": "mohanagar",
+    "timestamp": 14.5,
+    "label": "safe",
+    "rationale": "Clean pause between dialogue exchanges"
+  }
+]
